@@ -50,13 +50,13 @@ jobs:
             run: npm install
           
           - name: Test Code Coverage
-            run: npm run code-coverage
+            run: npm run coverage
 
           - name: Archive Code Coverage Test Result
             uses: actions/upload-artifact@v3
             if: failure()
             with:
               name: Code-Coverage-Result
-              path: code-coverage-result.xml
+              path: coverage
               retention-days: 5
               
